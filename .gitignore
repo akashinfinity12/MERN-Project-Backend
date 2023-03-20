@@ -1,6 +1,5 @@
 .env.production
 .env
-uploads/
 
 # Logs
 logs
