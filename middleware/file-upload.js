@@ -11,7 +11,7 @@ const MIME_TYPE_MAP = {
 const fileUpload = multer({
   limits: 500000,
   storage: multer.diskStorage({
-    destination: path.join(__dirname, "uploads/images"),
+    destination: path.join(__dirname, "../uploads/images"),
     filename: (req, file, callBack) => {
       const extension = MIME_TYPE_MAP[file.mimetype];
       callBack(null, uuidv1() + "." + extension);
