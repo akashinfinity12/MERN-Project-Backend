@@ -42,11 +42,9 @@ app.use((error, req, res, next) => {
     .json({ message: error.message || "Some error occurred" });
 });
 
-const port = process.env.PORT || 3000;
-
 mongoose
   .connect(
     `mongodb+srv://${process.env.MONGODBUSERNAME}:${process.env.MONGODBPASSWORD}@mern.5gjhp6e.mongodb.net/${process.env.MONGODBNAME}?retryWrites=true&w=majority`
   )
-  .then(() => app.listen(port))
+  .then(() => app.listen(5000))
   .catch((error) => console.log(error));
